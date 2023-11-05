@@ -1,0 +1,50 @@
+body {
+  background: gray;
+}
+
+.container {
+  background: lightcoral;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: grid;
+  /* grid-template-columns: 1fr 2fr; */
+  /* Fractions = 1fr  */
+  /* grid-template-rows: 100px 50px 30px 100px; */
+  /* grid-template-columns: 25px repeat(3, 1fr 1fr); */
+  /* grid-template-columns: 25px repeat(3, 1fr); */
+  grid-template-columns: minmax(50px, 1fr) repeat(2, 1fr);
+  grid-auto-rows: 50px;
+  gap: 10px;
+  padding: 10px;
+  height: 900px;
+  justify-items: stretch;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.container div {
+  background: lightblue;
+  border: 2px solid #09f;
+  border-radius: 6px;
+}
+
+.container div:first-child {
+  background: rgb(242, 243, 170);
+  /* grid-column-start: span 1;
+  grid-row-start: span 2; */
+  justify-self: center;
+  align-self: center;
+}
+
+.container div:nth-child(2) {
+  background: rgb(255, 215, 215);
+  /* grid-column: 1 / -1;
+  grid-row: 1 / -4; */
+}
+
+/* @media (width > 500px) {
+  .container {
+    grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+  }
+} */
